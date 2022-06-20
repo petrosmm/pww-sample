@@ -1,0 +1,153 @@
+// Override Default Variables
+// https://getbootstrap.com/docs/5.0/customize/sass/#variable-defaults
+
+// $primary: #6610f2 !important;
+// $secondary: #fd7e14 !important;
+
+@import "@fontsource/roboto-slab";
+@import "@fontsource/roboto-condensed";
+
+// page 6 (typography)
+$font-family-open-sans: "Open Sans";
+$font-family-roboto-slab: "Roboto Slab";
+$font-family-roboto-condensed: "Roboto Condensed";
+$font-family-base: $font-family-open-sans;
+
+.font-family-roboto-slab {
+    font-family: "Roboto Slab" !important;
+}
+
+.font-family-roboto-condensed {
+    font-family: $font-family-roboto-condensed !important;
+}
+
+$enable-responsive-font-sizes: true;
+
+// page 11 (palettes)
+// first row colors
+$palette1-1: #142B47 !default;
+$palette1-2: #1B3A61 !default;
+$palette1-3: #225089 !default;
+$palette1-4: #3068AD !default;
+$palette1-5: #0074C1 !default;
+$palette1-6: #93A4BD !default;
+$palette1-7: #35B0CB !default;
+
+// second row colors
+$palette2-1: #415A7b !default;
+
+// third row colors
+$palette3-1: #8C6910 !default;
+$palette3-2: #D2B589 !default;
+$palette3-3: #F0EBDD !default;
+$palette3-4: #F7F4ED !default;
+$palette3-5: #E9261D !default;
+
+// fourth row colors
+$palette4-1: #000000 !default;
+$palette4-2: #333333 !default;
+$palette4-3: #666666 !default;
+$palette4-4: #757575 !default;
+$palette4-5: #C3C3C3 !default;
+$palette4-6: #CCCCCC !default;
+$palette4-7: #E1E5EA !default;
+$palette4-8: #F3F6F9 !default;
+
+// dropper
+$palette-link: #4294CD !default;
+$palette-up-arrow-bg: #C3D7E7 !default;
+
+$blue: $palette1-1;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: $palette3-5;
+$orange: #fd7e14 !default;
+$yellow: $palette3-1;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$white: #fff !default;
+$gray: $palette4-3;
+$gray-dark: $palette4-2;
+$primary: $palette1-5;
+$secondary: $palette3-1;
+$success: $green !default;
+$info: $cyan !default;
+$warning: #f1c21b !default;
+$danger: $red;
+$light: $palette4-8;
+$dark: $palette4-2;
+$gold: $palette3-1;
+
+$pww-red: $red;
+$pww-blue: $blue;
+
+// had to do some extra
+$gray-600: $palette4-3;
+$gray-800: $palette4-2;
+
+// re-init here because of the project
+$colors: ();
+$colors: map-merge(("pww-red": $pww-red,
+        "pww-blue": $pww-blue,
+        "palette4-7": $palette4-7,
+        "palette1-2": $palette1-2,
+        "palette3-1": $palette3-1,
+        "palette1-6": $palette1-6,
+        "palette1-4": $palette1-4,
+        "palette-link": $palette-link,
+        "palette-up-arrow-bg": $palette-up-arrow-bg,
+        "palette1-5": $palette1-5,
+        "palette4-4": $palette4-4,
+        "palette4-3": $palette4-3,
+        "palette3-5": $palette3-5,
+        "palette3-2": $palette3-2,
+        "palette4-8": $palette4-8,
+        "palette1-1": $palette1-1),
+    $colors);
+
+// 'HEADER STYLE 3 (OPTION 2)'
+.header-style3 {
+    color: $palette1-2;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+// 'HEADER STYLE 2 (OPTION 1)'
+.header-style2 {
+    color: $palette1-2;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+// menu magic
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+    display: none !important;
+}
+
+// menu magic
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+    display: none !important;
+}
+
+// turn off caret
+.caret-off::before {
+    display: none;
+}
+
+// turn off caret
+.caret-off::after {
+    display: none;
+}
+
+// menu magic
+:not(.show) > #navbarDropdown .if-not-collapsed {
+    display: none !important;
+}
+
+// menu magic
+.show > #navbarDropdown .if-collapsed {
+    display: none !important;
+}

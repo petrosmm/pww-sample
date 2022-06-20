@@ -1,0 +1,7 @@
+// stylelint-disable property-disallowed-list, declaration-no-important
+
+@each $color, $value in $colors {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
